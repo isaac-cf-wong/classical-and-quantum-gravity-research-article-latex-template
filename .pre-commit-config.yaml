@@ -1,0 +1,71 @@
+exclude: ^iopjournal\.cls$
+
+# pre-commit.ci has no network access or ADS token, so bibsync runs only in
+# the GitHub Actions workflow, which reads the ADS_API_TOKEN secret.
+ci:
+    skip: [bibsync-bin]
+
+repos:
+    - repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v5.0.0
+      hooks:
+          - id: check-added-large-files
+          - id: check-merge-conflict
+          - id: check-symlinks
+          - id: check-yaml
+          - id: end-of-file-fixer
+          - id: mixed-line-ending
+          - id: trailing-whitespace
+
+    - repo: https://github.com/astral-sh/ruff-pre-commit
+      rev: v0.16.7
+      hooks:
+          - id: ruff
+            args: [--fix, --config=pyproject.toml]
+
+    - repo: https://github.com/crate-ci/typos
+      rev: v1.50.1
+      hooks:
+          - id: typos
+            args: []
+            exclude: ^\.gitignore$
+
+    - repo: https://github.com/cmhughes/latexindent.pl
+      rev: V3.24.5
+      hooks:
+          - id: latexindent
+
+    - repo: https://github.com/rbubley/mirrors-prettier
+      rev: v3.9.6
+      hooks:
+          - id: prettier
+
+    - repo: https://github.com/DavidAnson/markdownlint-cli2
+      rev: v0.23.2
+      hooks:
+          - id: markdownlint-cli2
+            args:
+                - --config
+                - .markdownlint.yaml
+
+    - repo: https://github.com/isaac-cf-wong/bibsync
+      rev: v0.4.12
+      hooks:
+          - id: bibsync-bin
+            args: [--fix, --cache, --provider, ads, --output, references.bib]
+
+    - repo: https://github.com/rhysd/actionlint
+      rev: v1.7.12
+      hooks:
+          - id: actionlint
+
+    - repo: https://github.com/astral-sh/uv-pre-commit
+      rev: 0.12.14
+      hooks:
+          # Update the uv lockfile
+          - id: uv-lock
+
+    - repo: https://github.com/betterleaks/betterleaks
+      rev: v1.8.1
+      hooks:
+          - id: betterleaks

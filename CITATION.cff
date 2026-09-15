@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: 'If you use this work, please cite it using the metadata below.'
+title:
+    'classical-and-quantum-gravity-research-article-latex-template: A GitHub
+    template repository for a Classical and Quantum Gravity research article'
+license: 'BSD-3-Clause'
+type: software
+repository-code: 'https://github.com/isaac-cf-wong/classical-and-quantum-gravity-research-article-latex-template'
+authors:
+    - given-names: Isaac C. F.
+      family-names: Wong
+      affiliation: KU Leuven
+      orcid: 'https://orcid.org/0000-0003-2166-0027'
+keywords:
+    - latex
+    - classical and quantum gravity
+    - iop publishing
+    - template
