@@ -171,7 +171,8 @@ more edits (no type/scope)
 
 ## 💡 Tips
 
-- Be kind and constructive in your communication.
+- Be kind and constructive in your communication, and follow our
+  [Code of Conduct](CODE_OF_CONDUCT.md).
 - Keep PRs focused and atomic—smaller changes are easier to review.
 - Tag your PR with relevant labels if you can.
 

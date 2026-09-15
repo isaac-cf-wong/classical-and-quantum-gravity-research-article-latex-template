@@ -27,6 +27,8 @@ _Classical and Quantum Gravity_ (CQG), published by IOP Publishing.
 - `Makefile`: Simplifies compilation using `latexmk`
 - `.github/`: CI workflows, pull request template, and issue templates
 - `CONTRIBUTING.md`: How to set up the tools, build, and write commit messages
+- `CODE_OF_CONDUCT.md`: Contributor Covenant Code of Conduct; replace
+  `[INSERT CONTACT METHOD]` with how to report incidents
 - `CITATION.cff`: Citation metadata used by Zenodo to archive each GitHub
   release; update the title, authors, and keywords for your paper
 - `.gitignore`: Excludes auxiliary files
