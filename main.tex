@@ -1,0 +1,138 @@
+% Template for a Classical and Quantum Gravity (CQG) research article.
+%
+% Based on the official IOP Publishing iopjournal.cls template:
+%   https://publishingsupport.iopscience.iop.org/questions/latex-template/
+% Author guidelines for CQG:
+%   https://publishingsupport.iopscience.iop.org/journals/classical-and-quantum-gravity/
+%
+% Class options
+%   [anonymous]  Removes author names, affiliations, e-mails, and the
+%                acknowledgments, funding, author contributions, and data
+%                availability sections for double-anonymous peer review.
+\documentclass{iopjournal}
+
+% iopjournal.cls already loads graphicx, xcolor, and hyperref.
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{lipsum}
+\graphicspath{{./}{figures/}}
+
+% Journal abbreviation macros used in BibTeX entries exported from NASA ADS.
+% REVTeX defines these, but iopjournal.cls does not.
+\providecommand{\apj}{ApJ}
+\providecommand{\apjl}{ApJL}
+\providecommand{\apjs}{ApJS}
+\providecommand{\aap}{A\&A}
+\providecommand{\mnras}{MNRAS}
+\providecommand{\nat}{Nature}
+\providecommand{\pra}{Phys.~Rev.~A}
+\providecommand{\prd}{Phys.~Rev.~D}
+\providecommand{\prl}{Phys.~Rev.~Lett.}
+\providecommand{\physrep}{Phys.~Rep.}
+\providecommand{\jcap}{J.~Cosmol.~Astropart.~Phys.}
+\providecommand{\araa}{ARA\&A}
+\providecommand{\aj}{AJ}
+\providecommand{\pasp}{PASP}
+\providecommand{\procspie}{Proc.~SPIE}
+
+\begin{document}
+
+% e.g. Paper, Letter, Topical Review, Focus Issue Paper, Comment, Reply
+\articletype{Paper}
+
+\title{Title of paper}
+
+% Place \orcid{} after each author name, immediately after the affiliation
+% numbers. Mark the corresponding author with $^{*}$.
+\author{Your Name$^{1,*}$\orcid{0000-0000-0000-0000} and Co-author Name$^{2}$\orcid{0000-0000-0000-0000}}
+
+\affil{$^1$Department, Institution, City, Country}
+
+\affil{$^2$Department, Institution, City, Country}
+
+\affil{$^*$Author to whom any correspondence should be addressed.}
+
+\email{your@email.com}
+
+% Keywords are required at submission.
+\keywords{gravitational waves, general relativity, sample term}
+
+% The abstract must not exceed 300 words, and must not contain undefined
+% acronyms, references, or figure, table, or equation numbers.
+\begin{abstract}
+	\lipsum[1]
+\end{abstract}
+
+\section{Introduction}
+
+\lipsum[1] \cite{2016PhRvL.116f1102A}
+
+\section{Methods}
+
+\lipsum[2]
+
+\begin{equation}
+	G_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^{4}} T_{\mu\nu}.
+	\label{eq:einstein}
+\end{equation}
+
+\section{Results}
+
+\lipsum[3] See figure~\ref{fig:example} and table~\ref{tab:example}.
+
+% Figures: vector PDF/EPS preferred. Single-column width is about 8.5 cm and
+% double-column width about 15 cm; aim for 8--12 pt text at the final size.
+% Do not use colour as the only means of conveying information.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{figure1}
+	\caption{Text describing the figure and the main conclusions drawn from it.}
+	\label{fig:example}
+\end{figure}
+
+\begin{table}
+	\caption{Caption text describing the table.}
+	\centering
+	\begin{tabular}{l c c c}
+		\hline
+		Column heading & Column heading & Column heading & Column heading \\
+		\hline
+		Data row 1     & 1.0            & 1.5            & 2.0            \\
+		Data row 2     & 2.0            & 2.5            & 3.0            \\
+		\hline
+	\end{tabular}
+	\label{tab:example}
+\end{table}
+
+\section{Conclusion}
+
+\lipsum[4]
+
+% Back-matter sections. Each command creates an unnumbered section. Remove
+% any that are not relevant. All except \suppdata are hidden with [anonymous].
+\ack{Add your acknowledgments here.}
+
+% List of funder names and grant numbers.
+\funding{Add your funding information here.}
+
+% Author contributions using the CRediT taxonomy: https://credit.niso.org
+\roles{Add the author contributions here.}
+
+% IOP research data policy:
+% https://publishingsupport.iopscience.iop.org/questions/research-data/
+\data{Add your data availability statement here.}
+
+% \suppdata{Describe any supplementary data files here.}
+
+\appendix
+\section{Appendix section}
+
+\lipsum[5]
+
+% CQG accepts either the Vancouver (numbered) or the Harvard (author-year)
+% system. iopart-num gives numbered references in IOP style.
+\section*{References}
+\bibliographystyle{iopart-num}
+\bibliography{references}
+
+\end{document}
