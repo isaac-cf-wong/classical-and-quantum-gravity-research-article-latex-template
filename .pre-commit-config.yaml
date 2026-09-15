@@ -1,5 +1,10 @@
 exclude: ^iopjournal\.cls$
 
+# pre-commit.ci has no network access or ADS token, so bibsync runs only in
+# the GitHub Actions workflow, which reads the ADS_API_TOKEN secret.
+ci:
+    skip: [bibsync-bin]
+
 repos:
     - repo: https://github.com/pre-commit/pre-commit-hooks
       rev: v5.0.0
