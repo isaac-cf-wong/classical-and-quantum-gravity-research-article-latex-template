@@ -7,7 +7,7 @@ ci:
 
 repos:
     - repo: https://github.com/pre-commit/pre-commit-hooks
-      rev: v5.0.0
+      rev: v6.0.0
       hooks:
           - id: check-added-large-files
           - id: check-merge-conflict
@@ -18,30 +18,30 @@ repos:
           - id: trailing-whitespace
 
     - repo: https://github.com/astral-sh/ruff-pre-commit
-      rev: v0.16.7
+      rev: v0.16.8
       hooks:
           - id: ruff
             args: [--fix, --config=pyproject.toml]
 
     - repo: https://github.com/crate-ci/typos
-      rev: v1.50.1
+      rev: v1.50.2
       hooks:
           - id: typos
             args: []
             exclude: ^\.gitignore$
 
     - repo: https://github.com/cmhughes/latexindent.pl
-      rev: V3.24.5
+      rev: V4.0.2
       hooks:
           - id: latexindent
 
     - repo: https://github.com/rbubley/mirrors-prettier
-      rev: v3.9.6
+      rev: v3.9.8
       hooks:
           - id: prettier
 
     - repo: https://github.com/DavidAnson/markdownlint-cli2
-      rev: v0.23.2
+      rev: v0.23.3
       hooks:
           - id: markdownlint-cli2
             args:
@@ -60,7 +60,7 @@ repos:
           - id: actionlint
 
     - repo: https://github.com/astral-sh/uv-pre-commit
-      rev: 0.12.14
+      rev: 0.12.17
       hooks:
           # Update the uv lockfile
           - id: uv-lock
