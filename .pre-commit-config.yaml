@@ -7,7 +7,7 @@ ci:
 
 repos:
     - repo: https://github.com/pre-commit/pre-commit-hooks
-      rev: v5.0.0
+      rev: v6.0.0
       hooks:
           - id: check-added-large-files
           - id: check-merge-conflict
@@ -24,14 +24,14 @@ repos:
             args: [--fix, --config=pyproject.toml]
 
     - repo: https://github.com/crate-ci/typos
-      rev: v1.50.3
+      rev: typos-dict-v0.14.2
       hooks:
           - id: typos
             args: []
             exclude: ^\.gitignore$
 
     - repo: https://github.com/cmhughes/latexindent.pl
-      rev: V3.24.5
+      rev: V4.0.3
       hooks:
           - id: latexindent
 
@@ -66,6 +66,6 @@ repos:
           - id: uv-lock
 
     - repo: https://github.com/betterleaks/betterleaks
-      rev: v1.9.0
+      rev: v2.0.0-rc.1
       hooks:
           - id: betterleaks
